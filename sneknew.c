@@ -6,14 +6,16 @@
 #include "vm.h"
 
 snek_object_t *_new_snek_object(vm_t *vm) {
-    snek_object_t *obj = calloc(1, sizeof(snek_object_t));
-    if (!obj) { return NULL; }
+  snek_object_t *obj = calloc(1, sizeof(snek_object_t));
+  if (obj == NULL) {
+    return NULL;
+  }
 
-    obj->is_marked = false;
+  obj->is_marked = false;
 
-    vm_track_object(vm, obj);
+  vm_track_object(vm, obj);
 
-    return obj;
+  return obj;
 }
 
 snek_object_t *new_snek_array(vm_t *vm, size_t size) {
