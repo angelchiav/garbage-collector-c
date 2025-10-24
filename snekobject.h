@@ -24,7 +24,7 @@ typedef enum SnekObjectKind {
 
 typedef union SnekObjectData {
     int v_int;
-    float v_int;
+    float v_float;
     char *v_string;
     snek_vector_t v_vector3;
     snek_array_t v_array;
