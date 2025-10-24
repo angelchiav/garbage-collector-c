@@ -63,4 +63,3 @@ stack_t *stack_new(size_t capacity) {
     }
     return stack;
 }
-
